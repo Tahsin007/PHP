@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .row{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+            gap: 10px;
+            margin: 15px;
+        }
+        .para{
+            border: 1px solid black;
+            background-color: rgb(255, 224, 224);
+            width: 160px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="calculator">
+        <div class="row">
+            <label for="first">First Number :</label>
+            <input type="number" id="number1">
+        </div>
+        <div class="row">
+            <label for="second">Second Number :</label>
+            <input type="number" id="number2">
+        </div>
+        <div class="row">
+            <label for="second">Output :</label>
+            <p id="output" class="para"></p>
+        </div>
+        <div class="row">
+            <input type="button" id="plus" value="+" onclick="calculate('+')">
+            <input type="button" id="minus" value="-" onclick="calculate('-')">
+            <input type="button" id="product" value="*" onclick="calculate('*')">
+            <input type="button" id="division" value="/" onclick="calculate('/')">
+        </div>
+
+    </div>
+
+    <script>
+        function calculate(op){
+            var x=document.getElementById("number1").value;
+            var y=document.getElementById("number2").value;
+            var z=document.getElementById("output");
+            if(op=='+'){
+                z.innerHTML=parseInt(x)+parseInt(y);
+            }else if(op=='-'){
+                z.innerHTML= parseInt(x)- parseInt(y);
+            }else if(op=='*'){
+                z.innerHTML=parseInt(x)*parseInt(y);
+            }else{
+                z.innerHTML=parseInt(x)/parseInt(y);
+            }
+        }
+    </script>
+</body>
+</html>

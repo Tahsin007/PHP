@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Change Background Color onclick using JavaScript</title>
+<!-- <link rel="stylesheet" href="new2.css"> -->
+</head>
+<style>
+   * {
+    margin: 0;
+    padding: 0;
+    }
+    body {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    }
+    .container {
+    border: 2px solid #333;
+    }
+    .color {
+    display: table-cell;
+    width: 50px;
+    height: 50px;
+    margin: 0 1px;
+    cursor: pointer;
+    border: 2px solid #FFF;
+    }
+    .clr1 {
+    background-color: #9B0FDB;
+    }
+    .clr2 {
+    background-color: #ffea00;
+    }
+    .clr3 {
+    background-color: #04DB53;
+    }
+    .clr4 {
+    background-color: #0F68DB;
+    }
+
+    .btn{
+        padding: 17px 30px;
+        background-color: #ffffff;
+        cursor: pointer;
+        font-size: 15px;
+        font-weight: 400;
+        color: rgb(0, 0, 0);
+    }
+</style>
+<body>
+ <div class="container">
+  <span id='1' onclick="color(this)" class='color clr1'></span>
+  <span id='2' onclick="color(this)" class='color clr2'></span>
+  <span onclick="color(this)" class='color clr3'></span>
+  <span onClick="color(this)" class='color clr4'></span>
+ </div>
+ <div class="btn-container">
+    <button id="3" onclick="color(this)" class="btn">Reset</button>
+ </div>
+ <script>
+    function color(z) {
+    var a = getComputedStyle(z);
+    var b = a.backgroundColor;
+    document.getElementsByTagName("BODY")[0].style.backgroundColor=b;
+    }
+    </script>
+</body>
+</html>

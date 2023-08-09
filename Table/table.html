@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            border-collapse: collapse;
+        }
+        th{
+            background-color: wheat;
+        }
+        th,td{
+            border: 2px solid black;
+            padding: 8px;
+            text-align: center;
+        }.double_row{
+            display: flex;
+            flex-direction: column;
+        }
+        .abc{
+            max-width: 100%;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Country</th>
+            <th>Phone</th>
+        </tr>
+        <tr>
+            <td>Tahsin</td>
+            <td>Ban</td>
+            <td>01303244508</td>
+        </tr>
+        <tr>
+            <td>Sayeed</td>
+            <td>Uganda</td>
+            <td>01303244509</td>
+        </tr>
+        <tr>
+            <td>Mamun</td>
+            <td>Ghana</td>
+            <td>01303244507</td>
+        </tr>
+        <tr>
+            <td>Mamun</td>
+            <td>Ghana</td>
+            <!-- <td> <tr><img src="mamun.jpg" alt="mamaunhalarpo" class="abc"></tr> <tr>Hello</tr></td> -->
+            <td colspan="2" class="double_row"> <div> <img src="mamun.jpg" alt="" class="abc"></div>
+            <div>Hello Mamun</div></td>
+        </tr>
+    </table>
+</body>
+</html>
